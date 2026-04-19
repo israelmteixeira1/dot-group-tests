@@ -16,7 +16,7 @@ prompt = ChatPromptTemplate.from_messages([
     HumanMessagePromptTemplate.from_template("{input}"),
 ])
 
-llm = ChatOpenAI(model="gpt-4", temperature=0.3)
+llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.3)
 
 memory = ConversationBufferMemory(return_messages=True)
 
