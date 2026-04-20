@@ -1,6 +1,5 @@
 # dot-group-tests
-Testes técnicos para desenvolvedor backend com foco em IA. Este projeto está dividido em pastas, cada uma contendo a solução de uma questão específica do teste.
-
+Teste técnico backend/IA com três soluções independentes: (1) API REST de biblioteca virtual com FastAPI + SQLAlchemy + Pytest; (2) chatbot terminal com LangChain + OpenAI API + ConversationBufferMemory; (3) pipeline RAG com extração de PDF, chunking, embeddings via Sentence Transformers e indexação vetorial com FAISS.
 ---
 
 ## Questão 1 — API de Biblioteca Virtual
