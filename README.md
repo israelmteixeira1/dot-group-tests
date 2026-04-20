@@ -1,5 +1,6 @@
 # dot-group-tests
 Teste técnico backend/IA com três soluções independentes: (1) API REST de biblioteca virtual com FastAPI + SQLAlchemy + Pytest; (2) chatbot terminal com LangChain + OpenAI API + ConversationBufferMemory; (3) pipeline RAG com extração de PDF, chunking, embeddings via Sentence Transformers e indexação vetorial com FAISS.
+
 ---
 
 ## Questão 1 — API de Biblioteca Virtual
