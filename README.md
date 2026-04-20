@@ -54,4 +54,26 @@ Imagens demonstrando interações do usuário com o chatbot e o monitoramento pe
 ---
 
 ## Questão 3 — Vector Stores e Embeddings
-*(Em desenvolvimento...)*
+
+Este tema tem relevância direta com o meu TCC da pós-graduação em **Inteligência Artificial Aplicada**: um processo de otimização em um projeto já existente, utilizando aplicações RAG (*Retrieval-Augmented Generation*) e suas variantes, técnicas de engenharia de prompt, fine-tuning e outras abordagens na obtenção de respostas sobre a pecuária leiteira. A questão foi uma oportunidade de aplicar na prática conceitos que estou estudando e desenvolvendo academicamente.
+
+Sistema de busca semântica de documentos que indexa o conteúdo do livro **"500 Perguntas 500 Respostas — Gado de Leite" (Embrapa, 2012)** em um banco vetorial FAISS e permite consultas em linguagem natural. O texto é extraído do PDF, fatiado em chunks, convertido em vetores de embeddings e persistido em disco — nas execuções seguintes o índice é carregado diretamente, sem reprocessar o arquivo.
+
+### Tecnologias
+- Python, LangChain, FAISS, HuggingFace Sentence Transformers, pdfplumber
+
+### Como Executar
+```bash
+cd questao_3_vector_stores_embeddings
+pip install -r requirements.txt
+python busca_semantica.py
+```
+
+> **Nota:** `numpy==1.26.4` é um pin intencional — `faiss-cpu 1.7.4` quebra com NumPy 2.x.
+
+Na primeira execução o PDF é processado e o índice FAISS é construído e salvo em `faiss_index/`. As execuções seguintes carregam o índice do disco diretamente.
+
+O script exibe automaticamente 5 consultas de demonstração e em seguida entra em modo interativo, onde é possível digitar qualquer pergunta em linguagem natural. Digite `sair` para encerrar.
+
+### Imagem de Exemplo
+[`exemple-questions.png`](./questao_3_vector_stores_embeddings/exemple-questions.png) — demonstração do sistema em execução com exemplos de consultas e os trechos retornados pelo índice semântico.
